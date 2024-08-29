@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<h1>build an art board app like Paint application. 
+            by html, css and javascript</h1>
+    <div class="container">
+        
+        <div class="sidebar">
+            <div class="fill-style">
+            <h3>Fill Style</h3>
+            <input type="color" id="fillStyle" value="#f06d06">
+            </div>
+            <div class="stroke-style">
+            <h3>Stroke Style</h3>
+            <input type="color" id="strokeStyle" value="#000000">
+            </div>
+        </div>
+        <div class="canvas-container">
+            <div class="toolbar">
+                <button id="freehand">Freehand</button>
+                <button id="line">Line</button>
+                <button id="rectangle">Rectangle</button>
+                <button id="circle">Circle</button>
+                <button id="eraser">Eraser</button>
+
+            </div>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        </div>
+    </div>
+   
+    <script src="./main.js"></script>
+</body>
+</html>
