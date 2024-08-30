@@ -29,10 +29,12 @@ function draw(e) {
 
     ctx.strokeStyle = document.getElementById('strokeStyle').value;
     ctx.fillStyle = document.getElementById('fillStyle').value;
+    ctx.PenSize = document.getElementById('PenSize').value;
+    ctx.EraserSize = document.getElementById('EraserSize').value;
 
     switch (tool) {
         case 'freehand':
-            ctx.lineWidth = 2;
+           ctx.lineWidth = ctx.PenSize;
             ctx.lineCap = 'round';
             ctx.lineTo(e.offsetX, e.offsetY);
             ctx.stroke();
@@ -41,7 +43,7 @@ function draw(e) {
             break;
 
         case 'line':
-           
+            ctx.lineWidth = 2;
             ctx.beginPath();
             ctx.moveTo(startX, startY);
             ctx.lineTo(e.offsetX, e.offsetY);
@@ -66,7 +68,7 @@ function draw(e) {
             break;
             
         case 'eraser':
-            ctx.clearRect(e.offsetX, e.offsetY, 50, 50);
+            ctx.clearRect(e.offsetX, e.offsetY, ctx.EraserSize, ctx.EraserSize);
             break;
     }
 }

@@ -83,6 +83,7 @@ input[type="color"] {
     color: rgb(210, 87, 30);
     font-weight: bold;
     font-size: 20px;
+    
     text-transform: uppercase;
     
 
@@ -91,10 +92,11 @@ input[type="color"] {
     margin: auto;
     width: 90%;
   }
-  .stroke-style{
-    margin-top: 90px;
-  }
+  
   .sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     
     width: 200px;
     background-color: #ebebeb;
@@ -119,4 +121,8 @@ input[type="color"] {
     text-transform: uppercase;
    
 
+  }  
+
+  svg rect:first-child:hover{
+    fill:#fdfdfd !important;
   }
