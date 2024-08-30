@@ -96,7 +96,7 @@ input[type="color"] {
   .sidebar{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     
     width: 200px;
     background-color: #ebebeb;
